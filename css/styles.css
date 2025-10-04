@@ -274,15 +274,15 @@ html, body {
 }
 
 .sobre-text h1 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
   color: #ffc300;
   line-height: 1.2;
 }
 
-.sobre-text p {
+.sobre-descricao p {
   font-size: 1.1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   color: #e0e0e0;
 }
 
