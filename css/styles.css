@@ -679,7 +679,7 @@ html, body {
     display: flex;
     flex-direction: column;
   }
-  .sobre-titulo {
+  .sobre-texto {
     order: 1;
   }
   .sobre-image {
