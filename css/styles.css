@@ -19,6 +19,11 @@ body {
   overflow-x: hidden;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -44,6 +49,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo-text{
@@ -146,6 +157,75 @@ body {
 
   .nav.active {
     right: 0;
+  }
+
+  .container {
+    padding: 0 4px; /* Menos padding lateral */
+  }
+  .servico-item,
+  .servico-image img,
+  .outros-servicos-placeholder {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sobre-content,
+  .contato-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .servico-item {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .servico-image img,
+  .outros-servicos-placeholder {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;      /* Um pouco mais alto */
+    min-height: 200px;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: block;
+    margin-left: 0;
+  }
+
+  .servico-item {
+    display: flex;
+    flex-direction: column !important;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  .servico-image {
+    order: 1;
+  }
+  .servico-content {
+    order: 2;
+  }
+
+  .sobre-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .sobre-titulo {
+    order: 1;
+  }
+  .sobre-image {
+    order: 2;
+  }
+  .sobre-descricao {
+    order: 3;
   }
 }
 
@@ -520,38 +600,92 @@ body {
    RESPONSIVIDADE
    ======================================== */
 @media (max-width: 768px) {
-  .sobre-content {
-    flex-direction: column;
+  .hamburger {
+    display: flex;
   }
 
-  .sobre-text h1 {
-    font-size: 2rem;
+  .nav {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background-color: rgba(44, 44, 44, 0.98);
+    padding: 2rem;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .container {
+    padding: 0 4px; /* Menos padding lateral */
+  }
+  .servico-item,
+  .servico-image img,
+  .outros-servicos-placeholder {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sobre-content,
+  .contato-content {
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .servico-item {
     flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
 
-  .servico-item:nth-child(even) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .servico-image img,
+  .outros-servicos-placeholder {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;      /* Um pouco mais alto */
+    min-height: 200px;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: block;
+    margin-left: 0;
+  }
+
+  .servico-item {
+    display: flex;
+    flex-direction: column !important;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  .servico-image {
+    order: 1;
+  }
+  .servico-content {
+    order: 2;
+  }
+
+  .sobre-content {
+    display: flex;
     flex-direction: column;
   }
-
-  .contato-content {
-    flex-direction: column;
+  .sobre-titulo {
+    order: 1;
   }
-
-  .section-title {
-    font-size: 2rem;
+  .sobre-image {
+    order: 2;
   }
-
-  .whatsapp-float {
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-  }
-
-  .whatsapp-float .whatsapp-icon {
-    font-size: 1.5rem;
+  .sobre-descricao {
+    order: 3;
   }
 }
