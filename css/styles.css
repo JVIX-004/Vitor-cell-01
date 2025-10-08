@@ -215,23 +215,33 @@ html, body {
 /* ========================================
    ÍCONES FLUTUANTES ANIMADOS
    ======================================== */
-.floating-icon {
-  position: absolute;
-  font-size: 2rem;
+.outros-servicos-placeholder {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* espaço entre os ícones */
+  height: 100%;
+  width: 100%;
+}
+
+.outros-servicos-placeholder .icon {
+  font-size: 4.5rem; /* aumenta o tamanho dos ícones */
   animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 10px rgba(255, 195, 0, 0.5));
+  filter: drop-shadow(0 0 10px rgba(255, 195, 0, 0.6));
 }
 
-.icon-1 { top: 10%; left: -10%; animation-delay: 0s; }
-.icon-2 { top: 30%; right: -10%; animation-delay: 0.5s; }
-.icon-3 { bottom: 30%; left: -10%; animation-delay: 1s; }
-.icon-4 { bottom: 10%; right: -10%; animation-delay: 1.5s; }
-.icon-5 { top: 50%; left: -15%; animation-delay: 2s; }
-
+/* Animação suave */
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(10deg); }
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(8deg);
+  }
 }
+
 
 /* ========================================
    BOTÕES
@@ -504,4 +514,54 @@ html, body {
   .contato-map iframe {
     height: 400px;
   }
+
+  /* center conis */
+  .outros-servicos-placeholder {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* espaço entre os ícones */
+  height: 100%;
+  width: 100%;
+}
+
+.outros-servicos-placeholder .icon {
+  font-size: 3.5rem; /* tamanho padrão (desktop) */
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 195, 0, 0.6));
+}
+
+/* Animação suave */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(8deg);
+  }
+}
+
+/* Ajuste para celular */
+@media (max-width: 768px) {
+  .outros-servicos-placeholder {
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .outros-servicos-placeholder .icon {
+    font-size: 4.5rem; /* ligeiramente menor pra caber melhor */
+  }
+
+  .servico-item .servico-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* centraliza e dá um respiro */
+  }
+}
+
 }
