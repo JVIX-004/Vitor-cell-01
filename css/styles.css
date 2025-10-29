@@ -506,6 +506,16 @@ html, body {
     align-items: center;
   }
 
+  .contato-info {
+    display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+  align-items: stretch;
+  grid-auto-rows: 1fr; 
+  }
+
   .info-item {
     width: 100%;
     text-align: center;
