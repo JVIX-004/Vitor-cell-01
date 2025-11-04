@@ -314,10 +314,15 @@ html, body {
 }
 
 .servico-image img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+  width: 100%;            /* ocupa quase toda a largura do card, deixando margem */
+  max-width: 100%;
+  height: 290px;  
+  max-height: 420px;
+  object-fit: cover;     /* mantém corte proporcional — use 'contain' se quiser ver a imagem inteira com espaço ao redor */
+  object-position: center; /* use 'top' para priorizar a parte superior da imagem */
   display: block;
+  margin: 0 auto;        /* centraliza dentro do card */
+  border-radius: 12px;
 }
 
 .servico-content {
