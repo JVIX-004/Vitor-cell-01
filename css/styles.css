@@ -481,6 +481,29 @@ html, body {
     margin-bottom: 2rem;
   }
 
+  /* Regra única para todas as imagens de serviço */
+  .servico-image img,
+  .outros-servicos-placeholder {
+    width: 100%;
+    max-width: 100%;
+    height: 320px !important; /* força mesma altura para todas */
+    min-height: 320px !important;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .servico-image { 
+    order: 1;
+    width: 100%;
+  }
+  .servico-content { 
+    order: 2;
+  }
+
   .section { padding: 60px 0; }
 
   .servico-image img, .outros-servicos-placeholder {
