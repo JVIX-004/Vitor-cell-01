@@ -576,3 +576,16 @@ html, body {
 }
 
 }
+
+@media (min-width: 769px) {
+  .servico-item.image-left {
+    display: flex;          /* garante layout em linha */
+    flex-direction: row-reverse; /* coloca a imagem à esquerda */
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .servico-item.image-left .servico-image {
+    /* ajuste de espaçamento à direita da imagem (opcional) */
+    margin-right: 0.5rem;
+  }
+}
